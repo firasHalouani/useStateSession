@@ -2,7 +2,8 @@ import { useState } from "react";
 
 function Form() {
   // we define two stateful variables, name and age
-  // the argument taken by the useState are the 
+  // the argument taken by the useState are the default values of the name / age 
+  // name = '', age = ''
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
