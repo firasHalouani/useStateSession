@@ -13,8 +13,9 @@ function Counter({ initialValue, step }) {
       {/* this code makes a button that takes in a callback function to update the state of the count variable to trigger a rerender */}
       <button onClick={
         () => {
+          // we can use setCount(count + 1); instead, because the p in this context is the previousState of the variable, thats why it also works! 
           setCount(p => {
-            return p + step;
+            return p + step; 
           })
         }
       }>increment</button>

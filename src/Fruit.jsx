@@ -2,13 +2,13 @@ import { useState } from 'react';
 import './Fruit.css'
 function Fruit() {
 
-  // fruit is a stateful variable conatining a string value 
+  // fruit is a stateful variable containing a string value 
   const [fruit, setFruit] = useState('');
 
-  // fruitslist is an array for strings of simnple fruits
+  // fruitslist is an array for strings of fruits
   const [fruitList, setFruitList] = useState([]);
 
-  // this si a map function to dynamically build list elements from the values of the fruitList array 
+  // this is a map function to dynamically build list elements from the values of the fruitList array 
   const displayFruits = () => fruitList.map((fruit, key) => <li key={key}>{fruit}</li>)
 
   // take the input field of fruit and get the contents of the input
@@ -24,7 +24,7 @@ function Fruit() {
   }
 
 
-  // the elements are in here
+  // the elements are in here, className is used along with css ;)
   return (
     <div>
       <div>
@@ -33,7 +33,7 @@ function Fruit() {
           <input type='submit' value='Add fruit' onClick={handleSubmit} />
         </form>
       </div>
-      <h1 className="h1">Fruits : </h1>
+      <h1 className="h1">Fruits: </h1>
       <ul>
         {displayFruits()}
       </ul>

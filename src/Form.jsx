@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 function Form() {
+  // we define two stateful variables, name and age
+  // the argument taken by the useState are the 
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
@@ -10,6 +12,7 @@ function Form() {
     console.log(n);
     setName(n);
   }
+
   // get the content of the age field for name then set the value accordingly
   const handleAgeInputChange = () => {
     const a = document.getElementById('a').value
@@ -24,8 +27,8 @@ function Form() {
       name,
       age
     });
-
   }
+
   // the jsx elements inside a form
   return (
     <div>
@@ -37,4 +40,5 @@ function Form() {
     </div>
   )
 }
+
 export default Form;
